@@ -1,0 +1,43 @@
+---
+title: "Angelina Jao"
+subtitle: "Student at Cal Poly Pomona"
+image: profile.jpg
+about: # https://quarto.org/docs/websites/website-about.html
+  template: jolla
+  links:
+    - icon: github
+      text: Github
+      href: https://github.com/angelinagjao
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/angelina-g-jao/
+---
+
+I am a third-year Business student at Cal Poly Pomona with a passion for data and storytelling. After graduating, I aspire to bring my analytical and creative skills to a marketing role at a well-known company.
+
+## Education
+
+California State Polytechnic University, Pomona | August 2023 - Expected Grad: May 2027
+
+## Skills
+
+**Technical Proficiency**
+Microsoft Word, PowerPoint, Excel, Google Workspace (Docs, Slides, Sheets, Drive), RStudio, Positron, and Notion.
+
+**Creative Tools**
+Adobe Creative Cloud (Photoshop, Illustrator, and Creative Suite); experienced in digital content and post editing.
+
+**Data Analytics & Reporting**
+Data organization, survey design (Google Forms), and performance reporting (Google Analytics, Excel); experienced in project tracking and trend forecasting.
+
+**Marketing Competencies**
+Social media post editing, content design, branding awareness, ability to adapt creative strategy to business goals, and strategic pitching.
+
+**Collaboration**
+Team-oriented, resourceful, and capable of managing high workloads in fast-paced environments.
+
+**Professional Attributes**
+Proactive, detail-oriented, and results-driven with strong organization, communication, and multitasking abilities.
+
+**Language Skills**
+Fluent in English and Intermediate Indonesian

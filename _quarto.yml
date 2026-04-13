@@ -1,0 +1,25 @@
+project:
+  type: website
+
+website:
+  title: "Angelina Jao"
+  open-graph: true
+  page-footer: "Made with ❤️ and Quarto"
+  navbar:
+    collapse-below: lg
+    left:
+      - text: Home
+        href: index.qmd
+      - text: Dashboard
+        href: "m10 assignment.qmd"
+      - text: Essay on Shiny Apps
+        href: "step 2.qmd"
+      - text: Essay on Shinylive
+        href: "step 3.qmd"
+    nav-buttons:
+      - icon: globe
+        href: https://www.coachella.com
+
+format:
+  html:
+    theme: [cosmo, styles.scss]

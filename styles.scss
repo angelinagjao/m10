@@ -1,0 +1,17 @@
+/*-- scss:defaults --*/
+$theme-lightpurple: #f2e2ff;
+$theme-blue: #71c7ec;
+$theme-green: #b7ded2;
+
+$body-bg: #FFDEF2;
+$body-color: rgb(55, 58, 60);
+$link-color: rgb(39, 128, 227);
+
+$font-family-sans-serif: "Source Sans Pro", -apple-system, "system-ui", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+$font-size-root: 17px;
+
+/*-- scss:rules --*/
+
+h1, h2, h3, h4, h5, h6 {
+  color: $theme-blue;
+}

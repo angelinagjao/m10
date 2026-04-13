@@ -1,0 +1,148 @@
+---
+title: "Dashboard about Coachella for Step 1"
+format: 
+  dashboard:
+    orientation: columns
+    theme: [flatly, styles.scss]
+    nav-buttons:
+      - icon: globe
+        href: https://www.coachella.com
+---
+
+```{r}
+#| label: setup
+#| message: false
+library(tidyverse)
+library(gt)
+
+coachella <- read_csv("coachella.csv") |>
+  mutate(
+    year       = as.numeric(year),
+    attendance = as.numeric(attendance),
+    daily_avg  = as.numeric(daily_avg)
+  )
+
+latest <- coachella |> arrange(desc(year)) |> slice(1)
+peak   <- coachella |> slice_max(attendance, n = 1)
+```
+
+## Column {width=30%}
+
+```{r}
+#| content: valuebox
+#| title: "Latest Year"
+#| icon: calendar-event
+#| color: primary
+list(value = latest$year)
+```
+
+```{r}
+#| content: valuebox
+#| title: "Latest Attendance"
+#| icon: people-fill
+#| color: danger
+list(value = scales::comma(latest$attendance))
+```
+
+```{r}
+#| content: valuebox
+#| title: "Peak Attendance"
+#| icon: trophy-fill
+#| color: warning
+list(value = scales::comma(peak$attendance),
+     subtitle = paste0("in ", peak$year))
+```
+
+```{r}
+#| content: valuebox
+#| title: "Latest Daily Avg"
+#| icon: person-arms-up
+#| color: success
+list(value = scales::comma(latest$daily_avg))
+```
+
+## Column {width=40%}
+
+```{r}
+#| label: attendance-by-year
+#| title: Historical Attendance
+#| fig-width: 6
+#| fig-height: 8
+coachella |>
+  ggplot(aes(x = year, y = attendance)) +
+  # Using the Blue for the area fill
+  geom_area(fill = "#07C8F9", alpha = 0.3) + 
+  # Using the Pink for the line and points to make the trend "pop"
+  geom_line(color = "#F62681", linewidth = 1.2) + 
+  geom_point(color = "#F62681", size = 3) +
+  scale_y_continuous(labels = scales::comma) +
+  scale_x_continuous(breaks = coachella$year) +
+  labs(x = "Year", y = "Total Attendees") +
+  theme_minimal() +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1),
+    # Optional: subtle grid color adjustment for the theme
+    panel.grid.minor = element_blank(),
+    panel.grid.major = element_line(color = "grey90")
+  )
+```
+
+## Column {width=30%}
+
+### Row {.tabset}
+
+```{r}
+#| title: Attendance by Headliner
+coachella |>
+  mutate(headliner = fct_reorder(headliner, attendance)) |>
+  ggplot(aes(y = headliner, x = attendance)) +
+  geom_col(fill = "#07C8F9") + # Electric Blue
+  scale_x_continuous(labels = scales::label_number(suffix = "K", scale = 1e-3)) +
+  labs(x = "Total Attendance", y = NULL) +
+  theme_minimal()
+```
+
+```{r}
+#| title: Daily Average by Year
+coachella |>
+  mutate(headliner = fct_reorder(headliner, daily_avg)) |>
+  ggplot(aes(y = headliner, x = daily_avg)) +
+  geom_col(fill = "#F62681") + # Hot Pink
+  scale_x_continuous(labels = scales::label_number(suffix = "K", scale = 1e-3)) +
+  labs(x = "Daily Average", y = NULL) +
+  theme_minimal()
+```
+
+### Row
+
+```{r}
+#| label: headliner-table
+#| title: Headliner History
+coachella |>
+  arrange(desc(year)) |>
+  select(year, headliner, attendance, daily_avg) |>
+  gt() |>
+  tab_header(title = md("**Coachella Headliner History**")) |>
+  # Blue header for structure
+  tab_style(
+    style = cell_fill(color = "#07C8F9"),
+    locations = cells_column_labels()
+  ) |>
+  tab_style(
+    style = cell_text(color = "white", weight = "bold"),
+    locations = cells_column_labels()
+  ) |>
+  # Pink text for the Year to make it pop
+  tab_style(
+    style = cell_text(color = "#F62681", weight = "bold"),
+    locations = cells_body(columns = year)
+  ) |>
+  fmt_number(columns = c(attendance, daily_avg), decimals = 0) |>
+  cols_label(
+    year       = "Year",
+    headliner  = "Headliner",
+    attendance = "Total Attendance",
+    daily_avg  = "Daily Average"
+  ) |>
+  opt_row_striping()
+```

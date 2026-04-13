@@ -1,0 +1,63 @@
+---
+title: "Essay on Shinylive"
+subtitle: "In Step 3, you learned about serverless Shiny Apps with Shinylive. What is Shinylive? Assume that you are also explaining it to your coworkers. How does it differ from the traditional Shiny app introduced in Step 2? What are the pros and cons of Shinylive in comparison with Shiny Apps? These lecture notes will become your Essay on Shiny Live part of the website."
+format: html
+editor: visual
+---
+
+## 1. What Is Shinylive?
+
+Shinylive is a method for running Shiny applications entirely within the user's web browser, no dedicated R server required. It achieves this using **WebR**, a version of R compiled to run directly in the browser. Instead of sending user inputs to a remote server and waiting for a response, the browser itself becomes the "server."
+
+---
+
+## 2. Shinylive vs. Traditional Shiny
+
+The fundamental difference is *where* the computation happens:
+
+| Feature | Traditional Shiny | Shinylive (Serverless) |
+|---|---|---|
+| Server Requirement | Needs a backend (Shiny Server, Posit Connect, etc.) | No backend needed, hosted as static files (e.g., GitHub Pages) |
+| Computation | Happens on the remote server | Happens on the user's local machine/browser |
+| Cost | Can be expensive to maintain and scale | Extremely low cost, often free via static hosting |
+| Scaling | Limited by server capacity; can crash under high traffic | Scales infinitely, every new user brings their own computing power |
+
+---
+
+## 3. The Pros and Cons of Shinylive
+
+Like any tool, Shinylive involves trade-offs. It is important to evaluate these before choosing it for a project.
+
+### 3.1. Advantages
+
+**Zero Server Costs:** Since you only need to serve static HTML/JS files, you can host apps for free on services like GitHub Pages or Netlify.
+
+**Infinite Scalability:** You do not have to worry about a traffic spike crashing your server. If 10,000 people visit the app at once, 10,000 browsers do the work independently.
+
+**Permanent Existence:** These apps can live indefinitely because they do not depend on a subscription-based server being maintained.
+
+### 3.2. Disadvantages
+
+**The "No Secrets" Rule:** Because the entire app and all its data are sent to the user's browser, there are no secrets. You cannot hide API keys, database passwords, or proprietary algorithms. If it is in the app, the user can find it.
+
+**Initial Load Time:** The first time a user visits, their browser must download the R environment. This currently takes approximately 5–10 seconds.
+
+**Package Limitations:** Not all R packages are compatible with Shinylive. Specifically, packages that rely on `curl` or system-level dependencies may not work in the browser environment.
+
+**Data Access:** Connecting directly to a private database is difficult because the browser's security model, this makes traditional database connections impractical.
+
+---
+
+## 4. When to Use Shinylive vs. Traditional Shiny
+
+**Use Shinylive if:**
+
+- You are building a public-facing dashboard with open-source data (e.g., an academic supplement or public portfolio project).
+- You want to avoid the cost and maintenance of a server.
+- Your app uses standard `tidyverse` or `ggplot2` logic without complex system dependencies.
+
+**Stick to Traditional Shiny if:**
+
+- You need to connect to a private database using secure credentials.
+- You are handling sensitive or proprietary data/code that must stay on a company server.
+- Your app requires heavy computation that would overwhelm a user's browser.
