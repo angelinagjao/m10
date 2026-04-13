@@ -1,0 +1,128 @@
+[
+  {
+    "objectID": "blog/second-post/index.html",
+    "href": "blog/second-post/index.html",
+    "title": "Second Post",
+    "section": "",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis imperdiet massa tincidunt nunc pulvinar sapien et ligula. Amet cursus sit amet dictum sit amet. Eget duis at tellus at urna condimentum. Convallis aenean et tortor at risus viverra. Tincidunt ornare massa eget egestas purus viverra accumsan. Et malesuada fames ac turpis egestas. At imperdiet dui accumsan sit amet. Ut ornare lectus sit amet est placerat. Enim nulla aliquet porttitor lacus luctus accumsan tortor posuere. Duis ultricies lacus sed turpis tincidunt id aliquet risus. Mattis enim ut tellus elementum sagittis. Dui id ornare arcu odio ut. Natoque penatibus et magnis dis. Libero justo laoreet sit amet cursus sit. Sed faucibus turpis in eu. Tempus iaculis urna id volutpat lacus laoreet.\nPhasellus vestibulum lorem sed risus. Eget felis eget nunc lobortis mattis. Sit amet aliquam id diam maecenas ultricies. Egestas maecenas pharetra convallis posuere morbi. Etiam erat velit scelerisque in dictum non consectetur a erat. Cras fermentum odio eu feugiat pretium nibh ipsum consequat. Viverra accumsan in nisl nisi scelerisque. Et netus et malesuada fames ac. Amet tellus cras adipiscing enim eu turpis egestas pretium aenean. Eget lorem dolor sed viverra ipsum nunc aliquet. Ultrices dui sapien eget mi proin sed libero enim sed. Ultricies mi eget mauris pharetra et ultrices neque. Ipsum suspendisse ultrices gravida dictum. A arcu cursus vitae congue mauris rhoncus aenean vel. Gravida arcu ac tortor dignissim convallis. Nulla posuere sollicitudin aliquam ultrices."
+  },
+  {
+    "objectID": "blog/third-post/index.html",
+    "href": "blog/third-post/index.html",
+    "title": "Third Blog Post",
+    "section": "",
+    "text": "The source for any page in your website could also be a Jupyter Notebook. This one is third-post/index.ipynb.\nHere’s an example I borrowed from the Seaborn docs:\n\nimport seaborn as sns\n\nsns.set_theme(style=\"whitegrid\")\n\n# Load the diamonds dataset\ndiamonds = sns.load_dataset(\"diamonds\")\n\n# Plot the distribution of clarity ratings, conditional on carat\nsns.displot(\n    data=diamonds,\n    x=\"carat\", hue=\"cut\",\n    kind=\"kde\", height=4, aspect=1.5,\n    multiple=\"fill\", clip=(0, None),\n    palette=\"ch:rot=-.25,hue=1,light=.75\",   \n)"
+  },
+  {
+    "objectID": "projects/index.html",
+    "href": "projects/index.html",
+    "title": "Projects",
+    "section": "",
+    "text": "Predicting House Prices with Machine Learning\n\n\n\nPython\n\nMachine Learning\n\nData Cleaning\n\n\n\nThis project involves using machine learning algorithms to predict house prices based on various features such as location, size, and amenities. It includes data cleaning, feature engineering, and model selection.\n\n\n\nJan 1, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nCustomer Segmentation Using Clustering Techniques\n\n\n\nR\n\nMachine Learning\n\nClustering\n\nStatistical Modelling\n\n\n\nThis project focuses on segmenting customers into different groups based on their purchasing behavior and demographics. It uses clustering algorithms like K-means and hierarchical clustering to identify distinct customer segments.\n\n\n\nApr 1, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nVisualizing Global CO2 Emissions\n\n\n\nR\n\nData Visualization\n\nEnvironmental Science\n\n\n\nThis project involves creating visualizations to show trends in global CO2 emissions over time. It includes data extraction from public databases, data cleaning, and using visualization libraries to create interactive charts and graphs.\n\n\n\nJul 1, 2024\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "step 3.html",
+    "href": "step 3.html",
+    "title": "Essay on Shinylive",
+    "section": "",
+    "text": "Shinylive is a method for running Shiny applications entirely within the user’s web browser, no dedicated R server required. It achieves this using WebR, a version of R compiled to run directly in the browser. Instead of sending user inputs to a remote server and waiting for a response, the browser itself becomes the “server.”"
+  },
+  {
+    "objectID": "step 3.html#what-is-shinylive",
+    "href": "step 3.html#what-is-shinylive",
+    "title": "Essay on Shinylive",
+    "section": "",
+    "text": "Shinylive is a method for running Shiny applications entirely within the user’s web browser, no dedicated R server required. It achieves this using WebR, a version of R compiled to run directly in the browser. Instead of sending user inputs to a remote server and waiting for a response, the browser itself becomes the “server.”"
+  },
+  {
+    "objectID": "step 3.html#shinylive-vs.-traditional-shiny",
+    "href": "step 3.html#shinylive-vs.-traditional-shiny",
+    "title": "Essay on Shinylive",
+    "section": "2. Shinylive vs. Traditional Shiny",
+    "text": "2. Shinylive vs. Traditional Shiny\nThe fundamental difference is where the computation happens:\n\n\n\n\n\n\n\n\nFeature\nTraditional Shiny\nShinylive (Serverless)\n\n\n\n\nServer Requirement\nNeeds a backend (Shiny Server, Posit Connect, etc.)\nNo backend needed, hosted as static files (e.g., GitHub Pages)\n\n\nComputation\nHappens on the remote server\nHappens on the user’s local machine/browser\n\n\nCost\nCan be expensive to maintain and scale\nExtremely low cost, often free via static hosting\n\n\nScaling\nLimited by server capacity; can crash under high traffic\nScales infinitely, every new user brings their own computing power"
+  },
+  {
+    "objectID": "step 3.html#the-pros-and-cons-of-shinylive",
+    "href": "step 3.html#the-pros-and-cons-of-shinylive",
+    "title": "Essay on Shinylive",
+    "section": "3. The Pros and Cons of Shinylive",
+    "text": "3. The Pros and Cons of Shinylive\nLike any tool, Shinylive involves trade-offs. It is important to evaluate these before choosing it for a project.\n\n3.1. Advantages\nZero Server Costs: Since you only need to serve static HTML/JS files, you can host apps for free on services like GitHub Pages or Netlify.\nInfinite Scalability: You do not have to worry about a traffic spike crashing your server. If 10,000 people visit the app at once, 10,000 browsers do the work independently.\nPermanent Existence: These apps can live indefinitely because they do not depend on a subscription-based server being maintained.\n\n\n3.2. Disadvantages\nThe “No Secrets” Rule: Because the entire app and all its data are sent to the user’s browser, there are no secrets. You cannot hide API keys, database passwords, or proprietary algorithms. If it is in the app, the user can find it.\nInitial Load Time: The first time a user visits, their browser must download the R environment. This currently takes approximately 5–10 seconds.\nPackage Limitations: Not all R packages are compatible with Shinylive. Specifically, packages that rely on curl or system-level dependencies may not work in the browser environment.\nData Access: Connecting directly to a private database is difficult because the browser’s security model, this makes traditional database connections impractical."
+  },
+  {
+    "objectID": "step 3.html#when-to-use-shinylive-vs.-traditional-shiny",
+    "href": "step 3.html#when-to-use-shinylive-vs.-traditional-shiny",
+    "title": "Essay on Shinylive",
+    "section": "4. When to Use Shinylive vs. Traditional Shiny",
+    "text": "4. When to Use Shinylive vs. Traditional Shiny\nUse Shinylive if:\n\nYou are building a public-facing dashboard with open-source data (e.g., an academic supplement or public portfolio project).\nYou want to avoid the cost and maintenance of a server.\nYour app uses standard tidyverse or ggplot2 logic without complex system dependencies.\n\nStick to Traditional Shiny if:\n\nYou need to connect to a private database using secure credentials.\nYou are handling sensitive or proprietary data/code that must stay on a company server.\nYour app requires heavy computation that would overwhelm a user’s browser."
+  },
+  {
+    "objectID": "step 2.html",
+    "href": "step 2.html",
+    "title": "Essay on Shiny",
+    "section": "",
+    "text": "Shiny is an R package that allows you to build interactive web applications straight from R. It bridges the gap between complex data analysis and end-user accessibility.\n\nNo web dev skills needed: It builds the HTML, CSS, and Bootstrap framework for you behind the scenes.\nHighly accessible: Users just need a web URL to interact with the dashboards.\nDynamic: It easily converts our standard static plots (like ggplot2) into interactive tools."
+  },
+  {
+    "objectID": "step 2.html#what-is-r-shiny",
+    "href": "step 2.html#what-is-r-shiny",
+    "title": "Essay on Shiny",
+    "section": "",
+    "text": "Shiny is an R package that allows you to build interactive web applications straight from R. It bridges the gap between complex data analysis and end-user accessibility.\n\nNo web dev skills needed: It builds the HTML, CSS, and Bootstrap framework for you behind the scenes.\nHighly accessible: Users just need a web URL to interact with the dashboards.\nDynamic: It easily converts our standard static plots (like ggplot2) into interactive tools."
+  },
+  {
+    "objectID": "step 2.html#the-core-architecture-of-a-shiny-app",
+    "href": "step 2.html#the-core-architecture-of-a-shiny-app",
+    "title": "Essay on Shiny",
+    "section": "2. The Core Architecture of a Shiny App",
+    "text": "2. The Core Architecture of a Shiny App\nEvery Shiny app is built on two primary components that communicate with each other. You can store these as a single app.R file, or separate them into ui.R and server.R for larger team projects.\n\n2.1. The User Interface (UI)\nThe UI is the front-end skeleton. It dictates what the user sees, how the page is laid out, and how they interact with the tool.\n\nLayouts: You define the structural grid here. You can use standard setups like fluidPage with a sidebarLayout (which splits the screen into a sidebar for controls and a main panel for the graph), or you can use the shinydashboard package to build highly professional, modular dashboards with headers, sidebars, and body tabs.\nInputs: These are the widgets the user plays with to change the data. Examples include:\n\nselectInput: A dropdown menu.\ntextInput: A text entry box.\nsliderInput: A sliding numeric scale.\n\n\n\n\n\n\n\n\nImportantCrucial Rule\n\n\n\nEvery input must be assigned a unique ID (e.g., inputId = \"post_type\") so the Server knows exactly what to listen to.\n\n\n\nOutputs: This is where you tell the UI to reserve visual space for the final product (e.g., plotOutput, tableOutput, textOutput).\n\n\n\n2.2. The Server (The Brains)\nThe server works behind the scenes to take the inputs, process the data, and generate the outputs.\n\nThe server is initialized as a function with three arguments: input, output, and session.\nInput is Read-Only: The server can only listen to the user’s input; it cannot change it. To interact with an input you defined in the UI, you call it using input$your_id (e.g., input$post_type).\nRendering Outputs: When you generate a graph or table, it must be wrapped in a specific reactive context to be sent back to the UI, such as renderPlot for a ggplot or renderText for a dynamic title."
+  },
+  {
+    "objectID": "step 2.html#the-magic-of-reactivity",
+    "href": "step 2.html#the-magic-of-reactivity",
+    "title": "Essay on Shiny",
+    "section": "3. The Magic of Reactivity",
+    "text": "3. The Magic of Reactivity\nThis is the most important concept to grasp. Shiny is built on declarative programming rather than standard imperative programming.\nIn a standard R script, order strictly matters. You tell the computer exactly what to do line-by-line. In Shiny, you teach the app how to react if and when an input changes.\n\nReactive Dependencies: If an output depends on a specific input, Shiny creates a “reactive dependency.” Whenever the user moves a slider, Shiny automatically knows to trace that input back, recalculate the specific block of code tied to it, and instantly update the visual output.\nReactive Expressions reactive({}): If you are filtering a large dataset before plotting it, you don’t want to rewrite the filtering code for every single plot. You can create a reactive expression that filters your dataset based on the user’s input, saves it as an intermediate reactive object, and then passes that clean data to your output elements.\n\n\n\n\n\n\n\nNote\n\n\n\nWhen calling a reactive dataframe in the server, you must use parentheses, e.g., filtered_data()."
+  },
+  {
+    "objectID": "step 2.html#best-practices-for-workflow",
+    "href": "step 2.html#best-practices-for-workflow",
+    "title": "Essay on Shiny",
+    "section": "4. Best Practices for Workflow",
+    "text": "4. Best Practices for Workflow\nWhen we are building out these tools for the team, we should follow a structured sequence:\n\nSketch it out: Before coding, literally draw the dashboard on a piece of paper. Decide where the inputs go and what the final visual should look like.\nLoad Data Outside Reactivity: Read in your main CSV files or establish your basic tidy data at the very top of the script (or in the global environment) so the app only has to load the heavy data once upon startup, rather than every time the user clicks a button.\nBuild the static visual first: Write your ggplot or data wrangling code normally. Ensure the logic works first, then simply replace your hardcoded filter variables with the Shiny input$... variables."
+  },
+  {
+    "objectID": "step 2.html#deployment-and-security",
+    "href": "step 2.html#deployment-and-security",
+    "title": "Essay on Shiny",
+    "section": "5. Deployment and Security",
+    "text": "5. Deployment and Security\nOnce the app is built, it isn’t useful if it only lives locally on our IDEs.\n\nDeployment: You can bundle the app and host it on the cloud using services like shinyapps.io or Posit Cloud. By clicking the “Publish” button, R packages up the environment and deploys it to a live web URL.\nSecurity: If the dashboard contains sensitive operational metrics, you cannot leave the URL open to the public. For basic projects, the shinymanager package allows you to easily wrap your UI in a secure login screen, requiring a simple username and password to access the data."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Angelina Jao",
+    "section": "",
+    "text": "I am a third-year Business student at Cal Poly Pomona with a passion for data and storytelling. After graduating, I aspire to bring my analytical and creative skills to a marketing role at a well-known company."
+  },
+  {
+    "objectID": "index.html#education",
+    "href": "index.html#education",
+    "title": "Angelina Jao",
+    "section": "Education",
+    "text": "Education\nCalifornia State Polytechnic University, Pomona | August 2023 - Expected Grad: May 2027"
+  },
+  {
+    "objectID": "index.html#skills",
+    "href": "index.html#skills",
+    "title": "Angelina Jao",
+    "section": "Skills",
+    "text": "Skills\nTechnical Proficiency Microsoft Word, PowerPoint, Excel, Google Workspace (Docs, Slides, Sheets, Drive), RStudio, Positron, and Notion.\nCreative Tools Adobe Creative Cloud (Photoshop, Illustrator, and Creative Suite); experienced in digital content and post editing.\nData Analytics & Reporting Data organization, survey design (Google Forms), and performance reporting (Google Analytics, Excel); experienced in project tracking and trend forecasting.\nMarketing Competencies Social media post editing, content design, branding awareness, ability to adapt creative strategy to business goals, and strategic pitching.\nCollaboration Team-oriented, resourceful, and capable of managing high workloads in fast-paced environments.\nProfessional Attributes Proactive, detail-oriented, and results-driven with strong organization, communication, and multitasking abilities.\nLanguage Skills Fluent in English and Intermediate Indonesian"
+  },
+  {
+    "objectID": "blog/first-post/index.html",
+    "href": "blog/first-post/index.html",
+    "title": "First Post",
+    "section": "",
+    "text": "Sed risus ultricies tristique nulla aliquet. Neque volutpat ac tincidunt vitae semper quis lectus nulla.\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Enim sed faucibus turpis in eu mi bibendum neque. Ac orci phasellus egestas tellus rutrum tellus pellentesque eu. Velit sed ullamcorper morbi tincidunt ornare massa. Sagittis id consectetur purus ut faucibus pulvinar elementum integer. Tincidunt nunc pulvinar sapien et ligula ullamcorper malesuada proin libero. Lobortis feugiat vivamus at augue eget arcu. Aliquam ut porttitor leo a diam sollicitudin tempor id eu. Mauris a diam maecenas sed enim ut sem viverra aliquet. Enim ut tellus elementum sagittis vitae et leo duis. Molestie at elementum eu facilisis sed odio morbi quis commodo. Sapien pellentesque habitant morbi tristique senectus. Quam vulputate dignissim suspendisse in est. Nulla pellentesque dignissim enim sit amet venenatis urna cursus eget.\nVelit aliquet sagittis id consectetur purus ut faucibus pulvinar elementum. Viverra mauris in aliquam sem fringilla ut morbi tincidunt augue. Tortor at auctor urna nunc id. Sit amet consectetur adipiscing elit duis tristique sollicitudin. Aliquet nibh praesent tristique magna sit amet purus. Tristique senectus et netus et malesuada fames ac turpis. Hac habitasse platea dictumst quisque. Auctor neque vitae tempus quam pellentesque nec nam aliquam. Ultrices tincidunt arcu non sodales neque sodales ut etiam. Iaculis at erat pellentesque adipiscing. Cras tincidunt lobortis feugiat vivamus. Nisi est sit amet facilisis magna etiam. Pharetra pharetra massa massa ultricies mi quis hendrerit. Vitae sapien pellentesque habitant morbi tristique senectus. Ornare aenean euismod elementum nisi quis eleifend quam adipiscing vitae."
+  }
+]
